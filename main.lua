@@ -1,15 +1,18 @@
 local iga = require "iga"
+local ow, oh
 
-love.window.setMode(800,600,{borderless = true})
+love.load = function(args)
+	love.window.setMode(800,600,{borderless = true})
+	ow, oh = 100,100
 
-math.randomseed(os.time())
+	math.randomseed(os.time())
 
-local imgdata = love.image.newImageData("input/input_10.png")
+	local imgdata = love.image.newImageData("input/input_10.png")
 
 
-local ow, oh = 100,100
 
-iga:geninit(imgdata, ow,oh, imgdata:getWidth(), imgdata:getHeight(), 3)
+	iga:geninit(imgdata, ow,oh, imgdata:getWidth(), imgdata:getHeight(), 3)
+end
 
 love.draw = function()
 	love.graphics.scale(8,8)
