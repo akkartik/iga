@@ -2,7 +2,7 @@ local iga = require "iga"
 local ow, oh
 
 love.load = function(args)
-	love.window.setMode(800,600,{borderless = true})
+	love.window.setMode(800,600)
 	ow, oh = 100,100
 
 	math.randomseed(os.time())
