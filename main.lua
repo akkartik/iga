@@ -32,3 +32,8 @@ love.draw = function()
 		end
 	end
 end
+
+function love.filedropped(dropped_file)
+	local filename = dropped_file:getFilename()
+	init(filename:sub(#filename-17))
+end
