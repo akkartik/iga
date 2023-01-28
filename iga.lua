@@ -26,6 +26,8 @@ local output_width, output_height, input_width, input_height
 local colours, wave, entropy, N, colourids
 local colourids, input, inputids, total_colours
 
+local first
+
 -- Checks for if a pixel is out of boundaries
 local function inbounds_output(x,y)
 	return (x >= 0) and (y >= 0) and (x < output_width) and (y < output_height)
@@ -40,6 +42,7 @@ function iga:getColours()
 end
 
 function iga:geninit(imgdata, ow,oh,iw,ih,N_)
+	first = true
 	-- Dimensions of the output/input are given by MMF2
 	output_width = ow
 	output_height = oh
@@ -177,6 +180,12 @@ function iga:genstep()
 	end
 	
 	if (empty == 1) then
+		if first then
+			cellx=math.floor(love.mouse.getX()/8)
+			celly=math.floor(love.mouse.getY()/8)
+			print('empty', cellx,celly)
+		end
+		first = false
 		local validcells = {}
 
 		validcells = iga:fit(cellx,celly)
