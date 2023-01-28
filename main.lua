@@ -5,7 +5,9 @@ love.load = function(args)
 	love.window.setMode(800,600)
 	ow, oh = 100,100
 	math.randomseed(os.time())
-	init(args[1])
+	if #args > 0 then
+		init(args[1])
+	end
 end
 
 init = function(arg)
@@ -14,6 +16,7 @@ init = function(arg)
 end
 
 love.draw = function()
+	if iga:getColours() == nil then return end
 	love.graphics.scale(8,8)
 
 	for i=1, 20 do
