@@ -9,7 +9,7 @@ local imgdata = love.image.newImageData("input/input_10.png")
 
 local ow, oh = 100,100
 
-iga:geninit(imgdata, ow,ow, imgdata:getWidth(), imgdata:getHeight(), 3)
+iga:geninit(imgdata, ow,oh, imgdata:getWidth(), imgdata:getHeight(), 3)
 
 love.draw = function()
 	love.graphics.scale(8,8)
@@ -19,7 +19,7 @@ love.draw = function()
 	end
 	
 	for x=0, ow-1 do
-		for y=0,ow-1 do
+		for y=0,oh-1 do
 			local k = iga:getColours()[x+y*ow]
 			if k and k > 0 then
 				local c = string.format("%09d",tostring(k))
