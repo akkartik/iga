@@ -7,7 +7,7 @@ love.load = function(args)
 
 	math.randomseed(os.time())
 
-	local imgdata = love.image.newImageData("input/input_10.png")
+	local imgdata = love.image.newImageData(args[1])
 
 
 
