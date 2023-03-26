@@ -1,20 +1,12 @@
-# iga
-texture synthesis algorithm inspired by wave function collapse for love
+This is a fork of https://github.com/usysrc/iga, a texture synthesis algorithm
+inspired by https://github.com/mxgmn/WaveFunctionCollapse.
 
-## What
-This is an edited version of image generation algorithm: http://www.hempuli.com/blogblog/archives/1598
+This fork supports dropping a seed tile on the window, and begins seeding at
+the point on the window where the tile was dropped.
 
-It also includes a main.lua to use in Löve.
+![demo](demo.gif)
 
-## Original Info
-Let me repeat the original information here:
-
-IMAGE GENERATION ALGORITHM
-
-Based on & heavily inspired by the WaveFunctionCollapse (WFC) algorithm by mxgmn: https://github.com/mxgmn/WaveFunctionCollapse
-Executable & the .mfa source made using Multimedia Fusion 2 by Clickteam
-
-The MIT License
+## The MIT License
 Copyright 2017 Arvi Teikari
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.

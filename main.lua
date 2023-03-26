@@ -2,7 +2,8 @@ local iga = require "iga"
 local ow, oh
 
 love.load = function(args)
-	love.window.setMode(800,600)
+--?   love.window.setMode(800,800,{borderless=true})
+	love.window.setMode(800,800)
 	ow, oh = 100,100
 	math.randomseed(os.time())
 	if #args > 0 then
@@ -11,6 +12,7 @@ love.load = function(args)
 end
 
 init = function(arg)
+	print(arg)
 	local imgdata = love.image.newImageData(arg)
 	iga:geninit(imgdata, ow,oh, imgdata:getWidth(), imgdata:getHeight(), 3)
 end
